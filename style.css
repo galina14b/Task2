@@ -1,0 +1,165 @@
+.body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.infoTitle {
+  text-align: center;
+}
+
+.img1 {
+  background-image: url('./img/1.jpg');
+}
+
+.img2 {
+  background-image: url('./img/2.jpg');
+}
+
+.img3 {
+  background-image: url('./img/3.jpg');
+}
+
+.img4 {
+  background-image: url('./img/4.jpg');
+}
+
+.img5 {
+  background-image: url('./img/5.jpg');
+}
+
+.img6 {
+  background-image: url('./img/6.jpg');
+}
+
+.img7 {
+  background-image: url('./img/7.jpg');
+}
+
+.img8 {
+  background-image: url('./img/8.jpg');
+}
+
+.img9 {
+  background-image: url('./img/9.jpg');
+}
+
+.img10 {
+  background-image: url('./img/10.jpg');
+}
+
+.img11 {
+  background-image: url('./img/11.jpg');
+}
+
+.img12 {
+  background-image: url('./img/12.jpg');
+}
+
+
+
+/* Grid ========================*/
+
+.grid {
+  overflow: hidden;
+  width: 80%;
+  margin: 100px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.grid__item {
+  background-position: center;
+  background-size: cover;
+  height: 260px;
+  border: solid 5px darkgray;
+  border-radius: 50%;
+  transition: linear .5s;
+}
+
+.grid__item:nth-of-type(1),
+.grid__item:nth-of-type(5),
+.grid__item:nth-of-type(9) {
+    border: solid 5px red;
+}
+
+.grid__item:hover {
+  border: solid 5px yellow;
+  transform: rotate(45deg);
+}
+
+
+
+/* Modal ==============*/
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal__img {
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 70%;
+  height: 80%;
+}
+
+.modal__cross {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' fill='currentColor' class='bi bi-x' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.modal__cross:hover {
+  cursor: pointer;
+}
+
+.hidden__modal {
+  display: none;
+}
+
+
+/* Breakpoints =======================================*/
+
+@media all and (max-width: 900px) {
+  .grid {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid__item {
+    height: 400px;
+  }
+
+    .grid__item:nth-child(odd) {
+      border: solid 5px red;
+    }
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid__item:nth-child(n) {
+    height: 440px;
+    border: solid 5px darkgray;
+  }
+
+  .modal__img {
+    width: 95%;
+  }
+}
